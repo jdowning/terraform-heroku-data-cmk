@@ -32,7 +32,7 @@ data "aws_iam_policy_document" "heroku_data" {
     resources = ["*"]
     principals {
       type        = "AWS"
-      identifiers = ["arn:aws:iam:${var.heroku_account_id}:root"]
+      identifiers = ["arn:aws:iam::${var.heroku_account_id}:root"]
     }
     actions = [
       "kms:DescribeKey",
@@ -49,7 +49,7 @@ data "aws_iam_policy_document" "heroku_data" {
     resources = ["*"]
     principals {
       type        = "AWS"
-      identifiers = ["arn:aws:iam:${var.heroku_account_id}:root"]
+      identifiers = ["arn:aws:iam::${var.heroku_account_id}:root"]
     }
     actions = [
       "kms:CreateGrant",
